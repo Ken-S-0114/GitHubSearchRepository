@@ -13,7 +13,7 @@ struct Repository: Decodable {
   let owner: User
   
   // ローバリュー：実体の定義
-  enum CordingKeys: String, CodingKey {
+  enum CodingKeys: String, CodingKey {
     case id
     case name
     case fullName = "full_name"

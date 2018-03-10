@@ -9,6 +9,7 @@
 import Foundation
 
 final class GitHubAPI {
+  // リポジトリ検索APIの実装
   struct SearchRepositories: GitHubRequest {
     let keyword: String
     
@@ -28,6 +29,7 @@ final class GitHubAPI {
     }
   }
   
+  // ユーザー検索APIの実装:（今回は非実装）
   struct SearchUsers: GitHubRequest {
     let keyword: String
     

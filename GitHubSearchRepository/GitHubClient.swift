@@ -8,6 +8,7 @@
 
 import Foundation
 
+// HTTPクライアントの実装
 class GitHubClient {
   private let session: URLSession = {
     let configuration = URLSessionConfiguration.default
@@ -15,12 +16,16 @@ class GitHubClient {
     return session
   }()
   
+  // APIクライアントのインターフェース定義
   func send<Request: GitHubRequest>(
     request: Request,
     completion: @escaping (Result<Request.Response, GitHubClientError>) -> Void) {
+    // HTTPリクエストの送信
     let urlRequest = request.buildURLRequest()
     let task = session.dataTask(with: urlRequest) {
       data, response, error in
+      
+      // HTTPレスポンスの処理
       switch (data, response, error) {
       case (_, _, let error?):
         completion(Result(error: .connectionError(error)))

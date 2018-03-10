@@ -9,6 +9,7 @@
 import Foundation
 
 protocol GitHubRequest {
+  // リクエストとレスポンスの紐付け
   associatedtype Response: Decodable
   
   var baseURL: URL { get }
@@ -21,7 +22,7 @@ extension GitHubRequest {
   var baseURL: URL {
     return URL(string: "https://api.github.com")!
   }
-  
+  // リクエストを表す型のURLRequest型へのマッピング
   func buildURLRequest() -> URLRequest {
     let url = baseURL.appendingPathComponent(path)
     var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
@@ -39,10 +40,12 @@ extension GitHubRequest {
     return urlRequest
   }
   
+  // Data型とHTTPURLResponse型のレスポンスを表す型へのマッピング
   func response(from data: Data,
                 urlResponse: URLResponse) throws -> Response {
     let decoder = JSONDecoder()
     
+    // HTTPURLResponseを確認することで処理を分岐させる
     if case (200..<300)? = (urlResponse as? HTTPURLResponse)?.statusCode {
       // JSONからモデルをインスタンス
       return try decoder.decode(Response.self, from: data)
