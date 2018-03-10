@@ -6,8 +6,6 @@
 //  Copyright © 2018年 佐藤賢. All rights reserved.
 //
 
-import Foundation
-
 struct Repository: Decodable {
   let id: Int
   let name: String
