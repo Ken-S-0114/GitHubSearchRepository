@@ -6,7 +6,7 @@
 //  Copyright © 2018年 佐藤賢. All rights reserved.
 //
 
-enum HTTPMethod: String {
+enum HTTPMethod : String {
   case get = "GET"
   case post = "POST"
   case put = "PUT"
