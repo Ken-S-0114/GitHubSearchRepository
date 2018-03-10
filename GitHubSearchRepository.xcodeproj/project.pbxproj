@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B25803BB2053E17E00D8D62A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25803BA2053E17E00D8D62A /* User.swift */; };
 		B25803BD2053E19A00D8D62A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25803BC2053E19A00D8D62A /* Repository.swift */; };
+		B25803BF2053E58A00D8D62A /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25803BE2053E58A00D8D62A /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		B25803B02053DE0100D8D62A /* GitHubSearchRepository */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GitHubSearchRepository; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25803BA2053E17E00D8D62A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B25803BC2053E19A00D8D62A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B25803BE2053E58A00D8D62A /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +61,35 @@
 		B25803B22053DE0100D8D62A /* GitHubSearchRepository */ = {
 			isa = PBXGroup;
 			children = (
-				B25803BA2053E17E00D8D62A /* User.swift */,
-				B25803BC2053E19A00D8D62A /* Repository.swift */,
+				B25803C22053E73100D8D62A /* Request */,
+				B25803C12053E72100D8D62A /* Error */,
+				B25803C02053E70A00D8D62A /* Response */,
 			);
 			path = GitHubSearchRepository;
+			sourceTree = "<group>";
+		};
+		B25803C02053E70A00D8D62A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B25803BA2053E17E00D8D62A /* User.swift */,
+				B25803BC2053E19A00D8D62A /* Repository.swift */,
+				B25803BE2053E58A00D8D62A /* SearchResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B25803C12053E72100D8D62A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		B25803C22053E73100D8D62A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +152,7 @@
 			files = (
 				B25803BB2053E17E00D8D62A /* User.swift in Sources */,
 				B25803BD2053E19A00D8D62A /* Repository.swift in Sources */,
+				B25803BF2053E58A00D8D62A /* SearchResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
